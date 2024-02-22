@@ -1,6 +1,7 @@
 import statistics as stat
 import matplotlib.pyplot as plt         #importing whats required 
 import collections 
+import studyscore
 soundlevel = []
 time=[]                 # estabhlising lists 
 tempreture = []
