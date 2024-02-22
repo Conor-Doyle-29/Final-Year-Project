@@ -12,5 +12,4 @@ def studyscore(sound,time,temp,water):
         if time > 0: 
             if time>= (30*6000):
                 studyscore+= 5
-    for i in water:  
-             
+    
