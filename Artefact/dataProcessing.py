@@ -1,7 +1,7 @@
 import statistics as stat
 import matplotlib.pyplot as plt         #importing whats required 
 import collections 
-import studyscore
+from studyScore import studyscore as study
 soundlevel = []
 time=[]                 # estabhlising lists 
 tempreture = []
@@ -34,30 +34,57 @@ for i in tmpList: # goes through temp data list and figures out what final list 
 for i in tmpSound:
     tmpSound.remove(i)
     i=i[:-1]
+    i=int(i)
     soundlevel.append(i)
     if i == "":
         soundlevel.remove(i) # valitdating  again 
 for i in tmpTime:
     tmpTime.remove(i)
     i=i[:-1]
+    i=int(i)
     time.append(i)
     if i =="":
         time.remove(i)
 for i in tmpTemp:
     tmpTemp.remove(i)
     i=i[:-1]
+    i=int(i)
     tempreture.append(i)
     if i=="":
         tempreture.remove(i)
 for i in TmpWater:
     TmpWater.remove(i)
     i=i[:-1]
+    i=int(i)
     waterTakenIn.append(i)
     if i== "":
         waterTakenIn.remove(i)
+
+
+soundlevelmean= stat.mean(soundlevel)
+print(soundlevelmean)
+timeMean= stat.mean(time)
+print(timeMean)
+tempretureMean= stat.mean(tempreture)
+print(tempretureMean)
+waterTakenInMean= stat.mean(waterTakenIn)
+print(waterTakenInMean)
+
+
+
 
 print(soundlevel)
 print(time)
 print(tempreture)
 print(waterTakenIn)
+print(soundlevelmean)
+print(timeMean)
+print(tempretureMean)
+print(waterTakenInMean)
 
+
+
+
+# Avanced requirments 
+studyscores=study(soundlevelmean,time,tempretureMean,waterTakenInMean)
+print(studyscores)
