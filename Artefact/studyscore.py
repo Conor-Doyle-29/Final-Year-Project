@@ -23,6 +23,6 @@ def studyscore(sound,time,temp,water):
             hyrdration+=1
         if hyrdration>0:
             studyscore=studyscore+(hyrdration*5)
-    print(studyscore)
+    
     return studyscore
     
