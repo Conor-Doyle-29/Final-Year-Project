@@ -1,9 +1,9 @@
 import statistics as stat
-import matplotlib.pyplot as plt         #importing whats required 
+#import matplotlib.pyplot as plt         #importing whats required 
 import collections 
 import random
 from studyScore import studyscore as study
-from listGenerator import listMaker as maker
+from listGenerator import noiseToHigh as noise
 soundlevel = []
 time=[]                 # estabhlising lists 
 tempreture = []
@@ -61,8 +61,9 @@ def dataProcess(dataset):
         waterTakenIn.append(i)
         if i== "":
             waterTakenIn.remove(i)
-
+    return waterTakenIn,tempreture,time, soundlevel
 processedList= dataProcess(tmpList)
+
 print(processedList)
 soundlevelmean= stat.mean(soundlevel)
 print(soundlevelmean)
@@ -93,5 +94,6 @@ studyscores=study(soundlevelmean,time,tempretureMean,waterTakenInMean)
 print(studyscores)
 
 #What if 1: What if the noise level is to high
-dataSet1=maker()
+dataSet1=noise()
 print(dataSet1)
+dataProcess(dataSet1)
