@@ -75,17 +75,26 @@ waterTakenInMean= stat.mean(waterTakenIn)
 print(waterTakenInMean)
 
 
+if soundlevelmean > 32:
+     print("The Sound Level is to loud", soundlevelmean)
+else: 
+     print("the sound level is good for studying", soundlevelmean)
+if tempretureMean > 23:
+     print("The Average tempreture is to hot",tempretureMean)
+elif tempretureMean<18:
+     print("The Average Tempreture is to cold", tempretureMean)
+else: 
+     print("The Tempreture is just right: ",tempretureMean)          
 
-
+'''
 print(soundlevel)
 print(time)
 print(tempreture)
 print(waterTakenIn)
 print(soundlevelmean)
-print(timeMean)
 print(tempretureMean)
 print(waterTakenInMean)
-
+'''
 
 
 
@@ -102,7 +111,7 @@ tempreture = []
 waterTakenIn = []
 #What if 1: What if the noise level is to high
 dataSet1=noise()
-print(dataSet1)
+#print(dataSet1)
 
 for i in dataSet1: # goes through the dataset and figures out what final list to assign them to 
         if "S" in i: 
