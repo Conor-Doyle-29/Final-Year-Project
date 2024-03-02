@@ -3,7 +3,8 @@ import statistics as stat
 import collections 
 import random
 from studyScore import studyscore as study
-from listGenerator import noiseToHigh as noise
+from nosieToHigh import noiseToHigh as noise
+from tempToHigh import tempreture as temp
 soundlevel = []
 time=[]                 # estabhlising lists 
 tempreture = []
@@ -161,6 +162,19 @@ waterTakenInMean= stat.mean(waterTakenIn)
 print(waterTakenInMean)
 studyscores=study(soundlevelmean,time,tempretureMean,waterTakenInMean)
 print(studyscores)
+
+
+# What If question 2 what if the tempreture is to high 
+dataSet2 = temp()
+print(dataSet2)
+tmpSound=[]
+tmpTime=[]
+tmpTemp=[]
+TmpWater=[]
+soundlevel = []
+time=[]                 # estabhlising lists 
+tempreture = []
+waterTakenIn = []
 
 
 
