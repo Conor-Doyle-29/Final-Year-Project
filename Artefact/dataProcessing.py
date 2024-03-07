@@ -6,6 +6,8 @@ from studyScore import studyscore as study
 from nosieToHigh import noiseToHigh as noise
 from tempToHigh import tempreture as temp
 from listSorter import dataProcess as process
+
+studyscores = []
 '''''
 soundlevel = []
 time=[]                 # estabhlising lists 
@@ -60,9 +62,10 @@ print(waterTakenInMean)
 '''
 
 
-
-studyscores=study(soundlevelmean,time,tempretureMean,waterTakenInMean)
-print(studyscores)
+for i in range(20):
+     studyscore=study(soundlevelmean,time,tempretureMean,waterTakenInMean)
+     print(studyscore)
+     studyscores.append(studyscore)
 # Avanced requirments 
 
 
@@ -78,10 +81,14 @@ print(tempretureMean)
 waterTakenInMean= stat.mean(waterTakenIn)
 print(waterTakenInMean)
 
-
-studyscores=study(soundlevelmean,time,tempretureMean,waterTakenInMean)
+for i in range(20):
+     studyscore=study(soundlevelmean,time,tempretureMean,waterTakenInMean)
+     print(studyscore)
+     studyscores.append(studyscore)
 print(studyscores)
-
+plt.plot(studyscores, label="Study Score", color="green")
+plt.plot(soundlevel, label="Sound Level")
+plt.show()
 
 # What If question 2 what if the tempreture is to high 
 dataSet2 = temp()
@@ -94,7 +101,9 @@ tempretureMean= stat.mean(tempreture)
 print(tempretureMean)
 waterTakenInMean= stat.mean(waterTakenIn)
 print(waterTakenInMean)
-
-studyscores=study(soundlevelmean,time,tempretureMean,waterTakenInMean)
+for i in range(20):
+     studyscore=study(soundlevelmean,time,tempretureMean,waterTakenInMean)
+     print(studyscore)
+     studyscores.append(studyscore)
 
 

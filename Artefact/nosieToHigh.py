@@ -2,7 +2,7 @@ import random
 def noiseToHigh():
 
     dataset=[]
-    for i in range(1000):
+    for i in range(60):
         tempreture= str((random.randint(10,35))) + "C"
         dataset.append(tempreture)
         water = str((random.randint(950,3000)) )+ "A"

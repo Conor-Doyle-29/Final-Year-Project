@@ -1,7 +1,7 @@
 import random
 def tempreture():
     dataset=[]
-    for i in range(1000):
+    for i in range(60):
         
         temps=str(random.randint(17,30)) + "C"
         dataset.append(temps)
