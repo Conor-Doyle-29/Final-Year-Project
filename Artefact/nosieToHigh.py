@@ -7,8 +7,8 @@ def noiseToHigh():
         dataset.append(tempreture)
         water = str((random.randint(950,3000)) )+ "A"
         dataset.append(water)
-        sound = str((random.randint(28,50))) + "S"
+        sound = str((random.randint(50,75))) + "S"
         dataset.append(sound)
-    return dataset
+    return water,tempreture, sound
 
 
