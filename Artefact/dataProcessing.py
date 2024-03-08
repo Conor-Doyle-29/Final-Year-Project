@@ -65,9 +65,9 @@ for i in range(20):
      studyscores.append(studyscore)
 studyscoresTempreture = studyscores
 ax[0,0].bar(height=range(len(studyscores)),x=1, color="green")
-ax[0,0].bar(height = range(len(soundlevelmeans)),x=2)
+ax[0,0].bar(height = range(len(soundlevel)),x=2)
 ax[1,0].bar(height= range(len(studyscores)),x=1)
-ax[1,0].bar(height = range(len(tempretureMeans)),x=2)
+ax[1,0].bar(height = range(len(tempreture)),x=2)
 
 # Avanced requirments 
 
@@ -96,7 +96,7 @@ print(studyscores)
 
 
 ax[0,1].bar(height=range(len(studyscores)),x=1 , color="green")
-ax[0,1].bar(height=range(len(soundlevelmeans)),x=2)
+ax[0,1].bar(height=range(len(soundlevel)),x=2)
 
 
 
@@ -117,7 +117,7 @@ for i in range(20):
      studyscoresTempreture.append(studyscore)
 
 ax[1,1].bar(height=range(len(studyscores)),x=1)
-ax[1,1].bar(height=range(len(tempretureMeans)),x=2)
+ax[1,1].bar(height=range(len(tempreture)),x=2)
 
 ax[0,0].set_title('Base Study Score')
 ax[0,1].set_title('Higer Sound Levels')
