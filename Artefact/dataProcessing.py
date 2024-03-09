@@ -59,18 +59,18 @@ else:
 
 
 
+
+
+# Avanced requirments 
 for i in range(20):
      studyscore=study(soundlevelmean,time,tempretureMean,waterTakenInMean)
      print(studyscore)
      studyscores.append(studyscore)
 studyscoresTempreture = studyscores
-ax[0,0].bar(height=range(len(studyscores)),x=1, color="green")
-ax[0,0].bar(height = range(len(soundlevel)),x=2)
-ax[1,0].bar(height= range(len(studyscores)),x=1)
-ax[1,0].bar(height = range(len(tempreture)),x=2)
-
-# Avanced requirments 
-
+ax[0,0].bar(height=studyscores,x=1, color="green")
+ax[0,0].bar(height = soundlevelmeans,x=2)                   # setting up the graphs for the base study score
+ax[1,0].bar(height= studyscores,x=1, color="green")
+ax[1,0].bar(height = tempreture,x=2)
 
 #What if 1: What if the noise level is to high
 dataSet1=noise()
@@ -80,23 +80,21 @@ for i in range(20):
      soundlevelmean= stat.mean(soundlevel)
      print(soundlevelmean)
      soundlevelmeans.append(soundlevelmean)
-     tempretureMean= stat.mean(tempreture)
-     print(tempretureMean)
-     tempretureMeans.append(tempretureMean)
+tempretureMean= stat.mean(tempreture)
+print(tempretureMean)
 waterTakenInMean= stat.mean(waterTakenIn)
 print(waterTakenInMean)
 
 for i in range(20):
-     studyscoresTest=[]
      studyscore=study(soundlevelmean,time,tempretureMean,waterTakenInMean)
      print(studyscore)
      studyscores.append(studyscore)
-     studyscoresTest.append(studyscore)
+     
 print(studyscores)
 
 
-ax[0,1].bar(height=range(len(studyscores)),x=1 , color="green")
-ax[0,1].bar(height=range(len(soundlevel)),x=2)
+ax[0,1].bar(height=range(len(studyscores)),x=1 , color="green")       # setting up the graph for the sound level comparison
+ax[0,1].bar(height=range(len(soundlevelmeans)),x=2)
 
 
 
@@ -107,8 +105,10 @@ waterTakenIn,tempreture,time,soundlevel= process(dataSet2)
 
 soundlevelmean= stat.mean(soundlevel)
 print(soundlevelmean)
-tempretureMean= stat.mean(tempreture)
-print(tempretureMean)
+for i in range(20):
+     tempretureMean= stat.mean(tempreture)
+     print(tempretureMean)
+     tempretureMeans.append(tempretureMean)
 waterTakenInMean= stat.mean(waterTakenIn)
 print(waterTakenInMean)
 for i in range(20):
@@ -116,15 +116,21 @@ for i in range(20):
      print(studyscore)
      studyscoresTempreture.append(studyscore)
 
-ax[1,1].bar(height=range(len(studyscores)),x=1)
-ax[1,1].bar(height=range(len(tempreture)),x=2)
+ax[1,1].bar(height=studyscores,x=1, color="green")     # setting up the graph for the tempreture comprarison
+ax[1,1].bar(height=tempretureMeans,x=2)
 
 ax[0,0].set_title('Base Study Score')
-ax[0,1].set_title('Higer Sound Levels')
+ax[0,1].set_title('Higer Sound Levels')      # setting the titles for each graph
 ax[1,0].set_title('Base Study Score')
 ax[1,1].set_title('Higher Temp Levels')
+
+ax[0, 0].set_ylim(0, max(studyscores) + 10)  
+ax[0, 1].set_ylim(0, max(studyscores) + 10)  
+ax[1, 0].set_ylim(0, max(studyscores) + 10)                 #setting the y axis limit for each graph
+ax[1, 1].set_ylim(0, max(studyscores) + 10)  
+
+
 plt.show()
 
-print(studyscoresTest)
 
 

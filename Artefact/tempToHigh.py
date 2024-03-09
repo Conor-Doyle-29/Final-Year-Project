@@ -3,7 +3,7 @@ def tempreture():
     dataset=[]
     for i in range(60):
         
-        temps=str(random.randint(22,30)) + "C"
+        temps=str(random.randint(30,40)) + "C"
         dataset.append(temps)
         water = str(random.randint(950,3500)) + "A"
         dataset.append(water)

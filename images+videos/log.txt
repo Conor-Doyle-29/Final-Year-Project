@@ -1,1 +1,4 @@
 ran into issues when it comes to graphing and the correct values for the models
+
+
+had to adjust dataset models in order to increase likely hood of a high average 

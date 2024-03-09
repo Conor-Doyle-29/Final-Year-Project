@@ -2,14 +2,14 @@ def studyscore(sound,time,temp,water):
     studyscore = 50
     hyrdration=0 
     if sound > 32:
-        studyscore-=20
+        studyscore-=40
     else: 
         studyscore+=20
     
     if temp > 20 and temp<23:
         studyscore+=20
     else:
-        studyscore-=20
+        studyscore-=40
     for i in time:
 
         if i > 0: 
