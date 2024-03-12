@@ -9,7 +9,7 @@ def studyscore(sound,time,temp,water):
     if temp > 20 and temp<23:
         studyscore+=20
     else:
-        studyscore-=40
+        studyscore-=30
     for i in time:
 
         if i > 0: 

@@ -35,15 +35,15 @@ tmpList.remove(tmpList[-1])
 
 waterTakenIn,tempreture,time,soundlevel= process(tmpList)
 for i in range(20):
-     soundlevelmean= stat.mean(soundlevel)
+     soundlevelmean= mean(soundlevel)
      print(soundlevelmean)
      soundlevelmeans.append(soundlevelmean) ## for loop for the graphs 
-     tempretureMean= stat.mean(tempreture)
+     tempretureMean= mean(tempreture)
      print(tempretureMean)
      tempretureMeans.append(tempretureMean)
-timeMean= stat.mean(time)
+timeMean= mean(time)
 print(timeMean)
-waterTakenInMean= stat.mean(waterTakenIn)
+waterTakenInMean= mean(waterTakenIn)
 print(waterTakenInMean)
 
 
@@ -78,12 +78,12 @@ dataSet1=noise()
 #print(dataSet1)
 waterTakenIn,tempreture,time,soundlevel= process(dataSet1)
 for i in range(20):
-     soundlevelmean= stat.mean(soundlevel)
+     soundlevelmean= mean(soundlevel)
      #print(soundlevelmean)
      soundlevelmeans.append(soundlevelmean)
-tempretureMean= stat.mean(tempreture)
+tempretureMean= mean(tempreture)
 print(tempretureMean)
-waterTakenInMean= stat.mean(waterTakenIn)
+waterTakenInMean= int(mean(waterTakenIn))
 print(waterTakenInMean)
 
 for i in range(20):
@@ -93,6 +93,7 @@ for i in range(20):
      
 print(studyscores)
 
+print("your studyscore has decreased due to the high sound levels ",studyscore )
 
 ax[0,1].bar(height=range(len(studyscores)),x=1 , color="green")       # setting up the graph for the sound level comparison
 ax[0,1].bar(height=range(len(soundlevelmeans)),x=2)
@@ -104,18 +105,20 @@ dataSet2 = temp()
 #print(dataSet2)
 waterTakenIn,tempreture,time,soundlevel= process(dataSet2)
 
-soundlevelmean= stat.mean(soundlevel)
+soundlevelmean= mean(soundlevel)
 print(soundlevelmean)
 for i in range(20):
-     tempretureMean= stat.mean(tempreture)
+     tempretureMean= mean(tempreture)
      #print(tempretureMean)
      tempretureMeans.append(tempretureMean)
-waterTakenInMean= stat.mean(waterTakenIn)
+waterTakenInMean= int(mean(waterTakenIn))
 print(waterTakenInMean)
 for i in range(20):
      studyscore=study(soundlevelmean,time,tempretureMean,waterTakenInMean)
      print(studyscore)
      studyscoresTempreture.append(studyscore)
+
+print("your studyscore has decreased due to the high tempretures ",studyscore )
 
 ax[1,1].bar(height=studyscoresTempreture,x=1, color="green")     # setting up the graph for the tempreture comprarison
 ax[1,1].bar(height=tempretureMeans,x=2)
