@@ -1,6 +1,6 @@
 import statistics as stat
 import matplotlib.pyplot as plt         #importing whats required 
-import collections 
+from mean import mean
 import random
 from studyScore import studyscore as study
 from nosieToHigh import noiseToHigh as noise
@@ -10,6 +10,7 @@ from listSorter import dataProcess as process
 studyscores = []
 soundlevelmeans=[]
 tempretureMeans =[]
+studyscoresTempreture=[]
 
 graphs, ax = plt.subplots(nrows=2,ncols=2) ###https://pieriantraining.com/matplotlib-tutorial-how-to-have-multiple-plots-on-same-figure/#:~:text=In%20Matplotlib%2C%20subplots%20are%20a,is%20used%20to%20create%20subplots.
 '''''
@@ -30,7 +31,7 @@ print(dataIn)
 
 tmpList= dataIn.split(",")
 tmpList.remove(tmpList[-1])
-print(tmpList)
+#print(tmpList)
 
 waterTakenIn,tempreture,time,soundlevel= process(tmpList)
 for i in range(20):
@@ -64,9 +65,9 @@ else:
 # Avanced requirments 
 for i in range(20):
      studyscore=study(soundlevelmean,time,tempretureMean,waterTakenInMean)
-     print(studyscore)
+     #print(studyscore)
      studyscores.append(studyscore)
-studyscoresTempreture = studyscores
+#studyscoresTempreture = studyscores
 ax[0,0].bar(height=studyscores,x=1, color="green")
 ax[0,0].bar(height = soundlevelmeans,x=2)                   # setting up the graphs for the base study score
 ax[1,0].bar(height= studyscores,x=1, color="green")
@@ -78,7 +79,7 @@ dataSet1=noise()
 waterTakenIn,tempreture,time,soundlevel= process(dataSet1)
 for i in range(20):
      soundlevelmean= stat.mean(soundlevel)
-     print(soundlevelmean)
+     #print(soundlevelmean)
      soundlevelmeans.append(soundlevelmean)
 tempretureMean= stat.mean(tempreture)
 print(tempretureMean)
@@ -87,7 +88,7 @@ print(waterTakenInMean)
 
 for i in range(20):
      studyscore=study(soundlevelmean,time,tempretureMean,waterTakenInMean)
-     print(studyscore)
+     #print(studyscore)
      studyscores.append(studyscore)
      
 print(studyscores)
@@ -100,14 +101,14 @@ ax[0,1].bar(height=range(len(soundlevelmeans)),x=2)
 
 # What If question 2 what if the tempreture is to high 
 dataSet2 = temp()
-print(dataSet2)
+#print(dataSet2)
 waterTakenIn,tempreture,time,soundlevel= process(dataSet2)
 
 soundlevelmean= stat.mean(soundlevel)
 print(soundlevelmean)
 for i in range(20):
      tempretureMean= stat.mean(tempreture)
-     print(tempretureMean)
+     #print(tempretureMean)
      tempretureMeans.append(tempretureMean)
 waterTakenInMean= stat.mean(waterTakenIn)
 print(waterTakenInMean)
@@ -116,7 +117,7 @@ for i in range(20):
      print(studyscore)
      studyscoresTempreture.append(studyscore)
 
-ax[1,1].bar(height=studyscores,x=1, color="green")     # setting up the graph for the tempreture comprarison
+ax[1,1].bar(height=studyscoresTempreture,x=1, color="green")     # setting up the graph for the tempreture comprarison
 ax[1,1].bar(height=tempretureMeans,x=2)
 
 ax[0,0].set_title('Base Study Score')
@@ -128,6 +129,10 @@ ax[0, 0].set_ylim(0, max(studyscores) + 10)
 ax[0, 1].set_ylim(0, max(studyscores) + 10)  
 ax[1, 0].set_ylim(0, max(studyscores) + 10)                 #setting the y axis limit for each graph
 ax[1, 1].set_ylim(0, max(studyscores) + 10)  
+ax[0,0].set_xticklabels([])
+ax[0,1].set_xticklabels([])
+ax[1,0].set_xticklabels([])
+ax[1,1].set_xticklabels([])
 
 
 plt.show()
