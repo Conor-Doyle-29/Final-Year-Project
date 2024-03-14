@@ -75,7 +75,7 @@ ax[1,0].bar(height = tempreture,x=2)
 
 #What if 1: What if the noise level is to high
 dataSet1=noise()
-#print(dataSet1)
+
 waterTakenIn,tempreture,time,soundlevel= process(dataSet1)
 for i in range(20):
      soundlevelmean= mean(soundlevel)
@@ -100,7 +100,7 @@ ax[0,1].bar(height=range(len(soundlevelmeans)),x=2)
 
 
 
-# What If question 2 what if the tempreture is to high 
+# What If question 2 what if the tempreture is ay heat wave levels
 dataSet2 = temp()
 #print(dataSet2)
 waterTakenIn,tempreture,time,soundlevel= process(dataSet2)
