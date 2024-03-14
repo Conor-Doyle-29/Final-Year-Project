@@ -13,7 +13,7 @@
       <li><a class= "Brief"href="brief.html">Meeting the Brief</a></li>
       <li><a href="InvestigationAndPlan.html">Investigation & Plan</a></li>
       <li><a class="home" href="design.html">Design & Development</a></li>
-      <li><a href="ImplementationAndTesting.html">Implementation & Testing</a></li>
+      <li><a href="create.html">Create</a></li>
       <li><a href="evaluation.html">Evaluation</a></li>
       <li><a href="references.html">References Table</a></li>
       <li><a href="summary.html">Word Summary</a></li>
@@ -25,24 +25,29 @@
 <div class = "text">
 <h1><center>Design & Development</center></h1>
 <p>
-  Following on from my investigation, it is clear to me that to satifisy the user requirements. I will need to create an artefact that monitors the study enviorment but also alerts the user when they have been studying to long.
+  Following on from my investigation, it is clear to me that to satifisy the user requirements. I will need to create an artefact that monitors the study environment but also alerts the user when they have been studying to long.
 
   <br> 
-  I plan to meet the basic requirements by: 
+  <h3>Basic Requirements</h3>
   <ol> 
     <li> My interpretation of fully automated was the system itself was to be automated when it received power. I also want to allow the user to start tracking the time being passed </li>
 
-    <li> I will use python code to take in data check its validity and store it in a csv file</li>
-    <li> I will use pyhton code to use to find the mean of the data and use this to inform the user about their wellbeing</li>
+    <li> I will use python code to take in data check its validity by checking for null values and corrupted data and preventing it from continuing as well as removing the new line artifacts that the mircrobit sends and store it in a csv file</li>
+    <li> I will use pyhton code to use to find the mean of the data and use this to inform the user about their wellbeing. I will find the mean of the temperature and use this to tell the user if their environment is to hot. and doing the same for sound levels </li>
   </ol>
- Advanced Tasks
+ <h3>Advanced Requirements</h3>
   <ol>
-    <li>I will create a model that simulates studyscores, it takes in the values and determines </li>
+    <li>I will create a model that simulates studyscores, it will takes in the values before then preforming calculations on them to decide on a studyscores </li>
+    <li>I will decide my 2 what if questions and create functions to modify datasets. I will then inform the user how these what if questions effected the studyscore. </li>
+    <ul>
+      <li> The first what if question i decided on was "what if the sound level is to high" and I will write a function to dataset to determine how this effects the model</li>
+      <li>My second what if question I came up with was "what if temperature at heat wave levels" and again writing a function to create a dataset to feed into the model</li>
+    </ul>
+    <li>I will use the matplotlib library for python to graph my data in an easy to understand and compare format</li>
   </ol>
-  Hardware required: 
+ <h3>Hardware required:</h3>  
   <ul>
-    <li>
-      Microbit</li>
+    <li> Microbit</li>
       <li>Microphone</li>
       <li>Luxmeter</li>
       <li>Gyro Meter</li> 
@@ -52,9 +57,9 @@
     
   </ul>
 
-  I 
   
-  Software Required:
+  
+  <h3>Software Required:</h3>
   <ul> 
     <li> Pyhton 
     </li>
@@ -65,7 +70,7 @@
   </ul>
 
 
-  I then created a system architexture diagram 
+  <h2>System Architecture Diagram </h2> 
 </p>
 </div>
   
