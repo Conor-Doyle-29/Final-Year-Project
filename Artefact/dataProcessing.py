@@ -93,7 +93,7 @@ for i in range(20):
      
 print(studyscores)
 
-print("your studyscore has decreased due to the high sound levels ",studyscore )
+print("your studyscore has decreased due to the high sound levels " )
 
 ax[0,1].bar(height=range(len(studyscores)),x=1 , color="green")       # setting up the graph for the sound level comparison
 ax[0,1].bar(height=range(len(soundlevelmeans)),x=2)
@@ -115,10 +115,10 @@ waterTakenInMean= int(mean(waterTakenIn))
 print(waterTakenInMean)
 for i in range(20):
      studyscore=study(soundlevelmean,time,tempretureMean,waterTakenInMean)
-     print(studyscore)
+     #print(studyscore)
      studyscoresTempreture.append(studyscore)
 
-print("your studyscore has decreased due to the high tempretures ",studyscore )
+print("your studyscore has decreased due to the high tempretures " )
 
 ax[1,1].bar(height=studyscoresTempreture,x=1, color="green")     # setting up the graph for the tempreture comprarison
 ax[1,1].bar(height=tempretureMeans,x=2)
