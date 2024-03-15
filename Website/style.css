@@ -84,6 +84,10 @@ h1{
   text-align: center;
 }
 
+li{
+  font-size: 25px;
+}
+
 tr:hover {background-color: rgb(247, 143, 143);}
 
 

@@ -48,13 +48,13 @@ print(waterTakenInMean)
 
 
 if soundlevelmean > 32:
-     print("The Sound Level is to loud", soundlevelmean)
+     print("The Sound Level is to loud, this may lead to ineffective study and can lead to increase in stress levels", soundlevelmean)
 else: 
-     print("the sound level is good for studying", soundlevelmean)
+     print("the sound level is good for studying and will lead to reduced stress", soundlevelmean)
 if tempretureMean > 23:
-     print("The Average tempreture is to hot",tempretureMean)              # advising future events
+     print("The Average tempreture is to hot this may lead to ineffective study and can lead to increase in stress levels",tempretureMean)              # advising future events
 elif tempretureMean<18:
-     print("The Average Tempreture is to cold", tempretureMean)
+     print("The Average Tempreture is to cold this may lead to ineffective study and can lead to increase in stress levels", tempretureMean)
 else: 
      print("The Tempreture is just right: ",tempretureMean)          
 
@@ -93,7 +93,7 @@ for i in range(20):
      
 print(studyscores)
 
-print("your studyscore has decreased due to the high sound levels " )
+print("your studyscore has decreased due to the high sound levels, this means that the study was less effective. This can lead to can lead to additonal stress" )
 
 ax[0,1].bar(height=range(len(studyscores)),x=1 , color="green")       # setting up the graph for the sound level comparison
 ax[0,1].bar(height=range(len(soundlevelmeans)),x=2)
@@ -118,7 +118,7 @@ for i in range(20):
      #print(studyscore)
      studyscoresTempreture.append(studyscore)
 
-print("your studyscore has decreased due to the high tempretures " )
+print("your studyscore has decreased due to the high tempretures this means that the study was less effective. This can lead to can lead to additonal stress " )
 
 ax[1,1].bar(height=studyscoresTempreture,x=1, color="green")     # setting up the graph for the tempreture comprarison
 ax[1,1].bar(height=tempretureMeans,x=2)

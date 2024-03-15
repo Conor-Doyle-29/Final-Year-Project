@@ -12,7 +12,7 @@ def unitTest(testLists):
             fails +=1 
     return passes, fails
 
-testLists = [[1, 2, 3, 4],[5, 6, 7, 8],[9, 10, 11, 12]]
+testLists = [[1, 2, 3, 4],[5, 6, 7, 8],[9, 10, 11, 12],[-1, -2, -3, -4],[100000,200000,300000,400000]]
 
 passes , fails = unitTest (testLists)
 
