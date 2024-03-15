@@ -6,7 +6,7 @@ ser.open()
 #pg 93 
 while True:
     data=str(ser.readline())
-    data= data.replace("b", "")
+    data= data.replace("b", "")                 # task 2
     data= data.replace("'", "")
     data= data.replace(" ", "")
     data= data.replace("\\r\\n", "")
@@ -14,4 +14,4 @@ while True:
         print(data)
         file= open ("tmp.csv",'a')
         file.write(data+",")
-        file.close()  ## validatation  #pg 92
+        file.close()  

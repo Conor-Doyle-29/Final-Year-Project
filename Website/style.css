@@ -5,13 +5,13 @@
 }
 
 .toolbar {
-  border:5px solid #000000;
+  border:5px solid #05ac72;
   border-width:5px ;
   list-style-type: none;
   margin: 0;
   padding: 0;
   text-align:center;
-  background-color: #81b29a; 
+  background-color: #056644; 
 }
 
 .toolbar li {
@@ -27,11 +27,11 @@
 }
 
 .toolbar li a:hover:not(.home) {
-  background-color: #f2cc8f;
+  background-color: #05ac72;
 }
 
 .home {
-  background-color: rgb(0, 0, 0);
+  background-color: #05ac72;
 }
 
 .text{
@@ -41,7 +41,7 @@
   left:75px;
   right:75px;
   background-color:white;
-  color: #e07a5f;
+  color: black;
 }
 
 table.tor{
@@ -51,6 +51,7 @@ table.tor{
   width:100%;
   text-align: left;
   vertical-align: center;
+  color: black;
 }
 th,td {
   border: 1px solid black;
@@ -88,7 +89,11 @@ li{
   font-size: 25px;
 }
 
-tr:hover {background-color: rgb(247, 143, 143);}
+tr:hover {background-color: #05ac72;}
+
+html{
+  background-color: white;
+}
 
 
 
